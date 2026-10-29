@@ -145,7 +145,7 @@ footer { color: var(--muted); font-size: .85rem; text-align: center; }
     <span><sup>3</sup>École normale supérieure - PSL</span>
   </div>
   <nav class="links" aria-label="Links">
-    <a href="#">Paper</a>
+    <a href="https://hal.science/hal-05840994">Paper (HAL)</a>
     <a href="#">arXiv</a>
     <a href="#videos">Video</a>
   </nav>
@@ -210,13 +210,14 @@ footer { color: var(--muted); font-size: .85rem; text-align: center; }
   </div>
   <div class="picker" role="group" aria-label="Method">
     <span class="lbl">Method</span>
+    <button type="button" id="m-input" data-method="input" aria-pressed="false">Input</button>
     <button type="button" id="m-motif" data-method="motif" aria-pressed="false">MoTIF</button>
     <button type="button" id="m-bfstvsr" data-method="bfstvsr" aria-pressed="false">BF-STVSR</button>
     <button type="button" id="m-v3" data-method="v3" aria-pressed="false">V³</button>
     <button type="button" id="m-Ours" data-method="Ours" aria-pressed="true">Ours</button>
   </div>
   <div class="player" id="player"><span class="tag" id="tag">Ours</span></div>
-  <figcaption>Adobe240 test sequences at <svg class="math" aria-label="\times 4" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.891ex" height="1.532ex" role="img" focusable="false" viewBox="0 -677 1278 677"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></svg> spatial, <svg class="math" aria-label="\times 8" style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="2.891ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1278 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></svg> temporal scale. Switching method keeps the playback position. Keys 1–4 also switch method.</figcaption>
+  <figcaption>Adobe240 test sequences at <svg class="math" aria-label="\times 4" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.891ex" height="1.532ex" role="img" focusable="false" viewBox="0 -677 1278 677"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></svg> spatial, <svg class="math" aria-label="\times 8" style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="2.891ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1278 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></svg> temporal scale. Input: the low-resolution input upscaled <svg class="math" aria-label="\times 4" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.891ex" height="1.532ex" role="img" focusable="false" viewBox="0 -677 1278 677"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></svg> by nearest neighbour, each frame repeated 8 times. Switching method keeps the playback position. Keys 1–5 also switch method.</figcaption>
 </section>
 
 <section>
@@ -266,8 +267,8 @@ footer { color: var(--muted); font-size: .85rem; text-align: center; }
 
 <script>
 (function () {
-  var METHODS = ["motif", "bfstvsr", "v3", "Ours"];
-  var LABEL = { motif: "MoTIF", bfstvsr: "BF-STVSR", v3: "V³", Ours: "Ours" };
+  var METHODS = ["input", "motif", "bfstvsr", "v3", "Ours"];
+  var LABEL = { input: "Input", motif: "MoTIF", bfstvsr: "BF-STVSR", v3: "V³", Ours: "Ours" };
   var player = document.getElementById("player"), tag = document.getElementById("tag");
   var scene = "IMG_0015", method = "Ours", vids = {};
 
@@ -306,7 +307,7 @@ footer { color: var(--muted); font-size: .85rem; text-align: center; }
     });
   });
   document.addEventListener("keydown", function (e) {
-    var i = "1234".indexOf(e.key);
+    var i = "12345".indexOf(e.key);
     if (i >= 0 && !e.metaKey && !e.ctrlKey && !e.altKey) show(METHODS[i]);
   });
   load(scene);
